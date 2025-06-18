@@ -3,8 +3,6 @@ import numpy as np
 from torch.autograd import Variable
 import time
 import math
-from RNN import *
-
 
 def TrainLSTM(train_dataloader, valid_dataloader, num_epochs=3):
     inputs, labels = next(iter(train_dataloader))
@@ -13,7 +11,7 @@ def TrainLSTM(train_dataloader, valid_dataloader, num_epochs=3):
     hidden_dim = fea_size
     output_dim = fea_size
 
-    lstm = LSTM(input_dim, hidden_dim, output_dim)
+    lstm = torch.nn.LSTM(input_dim, hidden_dim, output_dim)
 
     lstm.cuda()
 
