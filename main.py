@@ -19,18 +19,18 @@ args = parser.parse_args()
     
 if args.dataset =='know_air':
     print("\nLoading KnowAir Dataset...")
-    speed_matrix = pd.read_csv('/root/STG_Mamba/Know_Air_Dataset/knowair_temperature.csv',sep=',')
-    A = np.load('/root/STG_Mamba/Know_Air_Dataset/knowair_adj_mat.npy')
+    speed_matrix = pd.read_csv('STG-Mamba/KnowAir/knowair_temperature.csv',sep=',')
+    A = np.load('STG-Mamba/KnowAir/knowair_adj_mat.npy')
 
 elif args.dataset == 'pems04':
     print("\nLoading PEMS04 data...")
-    speed_matrix = pd.read_csv('/root/STG_Mamba/PEMS04_Dataset/pems04_flow.csv',sep=',')
-    A = np.load('/root/STG_Mamba/PEMS04_Dataset/pems04_adj.npy')
+    speed_matrix = pd.read_csv('STG-Mamba/PEMS04/pems04_flow.csv',sep=',')
+    A = np.load('STG-Mamba/PEMS04/pems04_adj.npy')
 
 elif args.dataset == 'hz_metro':
     print("\nLoading HZ-Metro data...")
-    speed_matrix = pd.read_csv('/root/STG_Mamba/HZ_Metro_Dataset/hzmetro_flow.csv',sep=',')
-    A = np.load('/root/STG_Mamba/HZ_Metro_Dataset/hzmetro_adj.npy')
+    speed_matrix = pd.read_csv('STG-Mamba/HZ_Metro_Dataset/hzmetro_flow.csv',sep=',')
+    A = np.load('STG-Mamba/HZ_Metro_Dataset/hzmetro_adj.npy')
 
 
 print("\nPreparing train/test data...")
