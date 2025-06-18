@@ -19,13 +19,13 @@ args = parser.parse_args()
     
 if args.dataset =='know_air':
     print("\nLoading KnowAir Dataset...")
-    speed_matrix = pd.read_csv('Know_Air/knowair_temperature.csv',sep=',')
-    A = np.load('Know_Air/knowair_adj_mat.npy')
+    speed_matrix = pd.read_csv('/STG-Mambomer/Know_Air/knowair_temperature.csv',sep=',')
+    A = np.load('/STG-Mambomer/Know_Air/knowair_adj_mat.npy')
 
 elif args.dataset == 'pems04':
     print("\nLoading PEMS04 data...")
-    speed_matrix = pd.read_csv('PEMS04/pems04_flow.csv',sep=',')
-    A = np.load('PEMS04/pems04_adj.npy')
+    speed_matrix = pd.read_csv('/STG-Mambomer/PEMS04/pems04_flow.csv',sep=',')
+    A = np.load('/STG-Mambomer/PEMS04/pems04_adj.npy')
 
 elif args.dataset == 'hz_metro':
     print("\nLoading HZ-Metro data...")
